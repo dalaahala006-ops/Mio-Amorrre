@@ -195,7 +195,7 @@ height .8s ease,
 top .8s ease,
 box-shadow .5s ease;
 user-select: none;
-touch-action: none;
+touch-action: pan-y;
 }
 
 .letter h2 {
@@ -242,10 +242,16 @@ z-index: 6;
 
 .scene.full .letter {
 top: -4px;
-height: 305px;
+height: 70vh;
+max-height: 600px;
+min-height: 0;
 transform: translateY(-8px);
 overflow-y: auto;
-cursor: default;
+overflow-x: hidden;
+-webkit-overflow-scrolling: touch;
+touch-action: pan-y;
+overscroll-behavior: contain;
+cursor: auto;
 box-shadow: 0 15px 35px #58372135;
 }
 
@@ -451,7 +457,6 @@ letter.addEventListener("pointerdown", (event) => {
 if (!opened || fullyOpen) return;
 startY = event.clientY;
 dragging = true;
-letter.setPointerCapture(event.pointerId);
 });
 
 letter.addEventListener("pointerup", (event) => {

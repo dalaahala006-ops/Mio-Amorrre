@@ -292,7 +292,7 @@ color: #795537;
 <body>
 <main>
 <div class="eyebrow">A little piece of my heart</div>
-<h1>For My Dearest Love</h1>
+<h1>To the most special Soul I have even seen and Meet</h1>
 <p class="intro">
 A letter from my heart to yours.<br>
 Sealed with love, just for you.
@@ -316,18 +316,24 @@ aria-label="Open the love letter">
 <article class="letter" id="letter" tabindex="0"
 aria-label="Your love letter">
 <h2>To My Beloved ♡</h2>
-<p id="letterText">My sweetest love,
+<p> HAPPY BIRTHDAY </p>
+<p id="letterText">My askimmmm ,
 
-If I could gather every beautiful thing in this world, I would still choose the moments I spend with you.
+    كل عام وإنت بألف خير يا قطعة من قلبي،
+    اكيد عرفت مين أنا ❤ ️
+    حابيت عايدك بطريقة سبيشل ما حدا يكون معايدك متلها من قبل. ما بعرف كيف بدي عايدك
+     بعد هاد البعد بس رح احكي يلي بقلبي ضيعتنييي ما بعرف كيف بدي عايدك يااشكمم❤️
+     يا رب تكون هالسنة حلوة عليك، وتكون أيامك مليانة فرح وراحة بال،
+     وتتحقق كل أمنياتك، وتضل ضحكتك ما تفارق وجهك،
+     ويعطيك الله من حلاوة الدنيا قد ما بتستاهل. بتمنالك من كل قلبي تشوف أيام حلوة، وتضل بخير ومبسوط، 
+    لأنك عنجد شخص إلو مكانة بقلبي ما بتشبه مكانة حدا تاني.
+     ويمكن مهما كتبت وحكيت ما رح اقدر وصّفلك قديش بتعنيني،
+     بس اليوم حبيت قلك كل عام وإنت بخير، 
+    وإن شاء الله تكون هالسنة بداية لكل شي حلو بحياتك، ويمكن كمان بداية لشي حلو يرجع يجمعنا نحنا التنين. ❤️
 
-You have become my favorite thought, my quiet happiness, and the warmth I carry with me wherever I go.
 
-I hope this little letter reminds you that you are loved more deeply than words can ever say.
-
-No matter how many pages life gives us, you will always be my favorite story.
-
-Forever and always, yours.</p>
-<div class="signature">With all my love, ♡</div>
+ما خلصت لسا في رسالة تانية ألك بيببب وعدني انك تقراء الرسالة كاملة</p>
+<div class="signature"> Mio AMoreee ♡</div>
 <p class="hint" id="hint">↑ Gently pull this letter upward ↑</p>
 </article>
 </div>
@@ -497,6 +503,294 @@ document.getElementById("passwordError").style.display = "block";
 
 
 </script>
+
+<section id="secret-access" style="margin-top: 30px; text-align: center;">
+<button id="showSecretLogin" type="button">
+في شي كمان إلك... ❤️
+</button>
+
+<div id="passwordBox" hidden style="margin-top: 20px;">
+  <p>  كلمة السر يا حبيبي تاريخ انا وياك منعرفو❤💌</p>
+  <p> مثال عن كلمة السر (xx.xx)</p>
+
+<form id="secretForm">
+<label for="secretPassword">كلمة السر:</label>
+<br>
+<input
+id="secretPassword"
+type="password"
+autocomplete="off"
+required
+placeholder="اكتب كلمة السر هون"
+>
+<button type="submit">افتح الرسالة ❤️</button>
+<p id="passwordMessage" aria-live="polite"></p>
+</form>
+</div>
+</section>
+
+<script>
+document.getElementById("showSecretLogin").addEventListener("click", function () {
+document.getElementById("passwordBox").hidden = false;
+this.hidden = true;
+});
+
+document.getElementById("secretForm").addEventListener("submit", function (event) {
+event.preventDefault();
+
+    const password = document.getElementBYId("secretpassword").value;
+    const message = document.getElementById("passwordMassage");
+    const secretLetter = document.getElementById("secretLetter");
+
+    if (password === "15.02") {
+        message.textContent = "amore";
+    } else {
+        message.textContent = " try again my loveeee ";
+        secretLetter.hidden = true;
+    }
+});
+
+
+document.getElementById("passwordMessage").textContent =
+"❤❤";
+;
+</script>
+
+<style>
+#secondEnvelope {
+display: none;
+text-align: center;
+margin: 30px auto;
+color: #f5e6c9;
+}
+
+#secondEnvelope .envelope {
+position: relative;
+width: 240px;
+height: 150px;
+margin: 20px auto;
+background: #7b263a;
+border: 2px solid #d4af70;
+border-radius: 5px;
+cursor: pointer;
+box-shadow: 0 8px 20px #200610;
+}
+
+#secondEnvelope .flap {
+position: absolute;
+inset: 0;
+background: #9e354b;
+clip-path: polygon(0 0, 100% 0, 50% 65%);
+transform-origin: top;
+transition: transform 0.7s;
+z-index: 2;
+}
+
+#secondEnvelope .seal {
+position: absolute;
+left: 50%;
+top: 48%;
+transform: translate(-50%, -50%);
+z-index: 3;
+font-size: 30px;
+}
+
+#secondEnvelope.open .flap {
+transform: rotateX(180deg);
+}
+
+#secondEnvelope .letter {
+display: none;
+background: #f5e6c9;
+color: #4a2c1e;
+
+width: 90%;
+max-width: 650px;
+height: 70vh;
+min-height: 400px;
+max-height: 750px;
+
+box-sizing: border-box;
+padding: 30px 24px;
+margin: 25px auto;
+
+border: 2px solid #d4af70;
+border-radius: 8px;
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+font-size: 18px;
+line-height: 2;
+text-align: right;
+
+overflow-y: auto;
+overflow-x: hidden;
+overflow-wrap: anywhere;
+-webkit-overflow-scrolling: touch;
+
+}
+
+#secondEnvelope.open .letter {
+display: block;
+animation: letterAppear 1s ease;
+}
+
+@keyframes letterAppear {
+from { opacity: 0; transform: translateY(20px); }
+to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+<div id="secondEnvelope">
+<h2>في رسالة مخبّاية إلك يا حبيبي ❤️</h2>
+<p>اضغط على الظرف وافتح المفاجأة 💌</p>
+
+<div class="envelope" id="envelopeClick" role="button"
+tabindex="0" aria-label="افتح الظرف">
+<div class="flap"></div>
+<div class="seal"> 
+    <span class="monogrm">❤</span>
+</div>
+
+</div>
+
+<div class="letter" id="loveLetter">
+<h2>إلك إنت، يا روحي ❤️</h2>
+
+<p>حبيبي…</p>
+
+<p>تَعَالَ نَعُدْ، فَإِنَّ فِي القَلْبِ أُمْنِيَةً،
+
+وَفِي لُقْيَاكَ عُمْرٌ يُولَدُ مِنْ جَدِيدِ.
+
+تَعَالَ نَجْمَعْ مَا تَبَعْثَرَ بَيْنَنَا،
+
+وَنَزْرَعْ مَكَانَ الأَسَى وَرْدًا لَا يَبِيدُ.
+
+وَلَكِنْ مَا انْتَهَتْ بَعْدُ حِكَايَتُنَا،
+
+فَفِي بَعْضِ دُرُوبِ الحُبِّ بَعْثٌ جَدِيدُ.
+
+لَعَلَّنَا يَوْمًا نَرْوِي لِمَنْ نُحِبُّ،
+
+كَيْفَ افْتَرَقْنَا، ثُمَّ عُدْنَا وَالْتَقَيْنَا.
+
+وَنَحْكِي لِأَوْلَادِنَا بِحُبٍّ حِكَايَةً،
+
+بِأَنَّ الحُبَّ إِنْ صَدَقَ، أَعَادَ القُلُوبَ بَعْدَ الشُّرُودِ. ❤ </p>
+
+<p> وهلأ بدي احكيلك شغلة من قلبي، وبلا غلاظة ومكابرة بقا يا مسيو أحمد 😂😭❤️
+
+أنا قررت ارجع اكتبلك، وقلت لحالي: 
+طيب أنا شو رح خسر إذا بادرت وحاولت؟ 
+بالعكس، أنا عم حاول حافظ على شخص غالي عليّ، 
+وعم حاول صلّح شي بعنيني.
+لك أنا عديمة المبادرة وبادرت إلك،
+ وعديمة المحاولة وحاولت كرمالك، 
+ ويمكن إنت ما شفت أو ما حسّيت، 
+بس رب العالمين بيعرف قديش كان هالشي كبير بالنسبة إلي.
+ عديمة الإحساس وحسّيت إلك، 
+وعديمة الحنان وحنيت إلك، 
+وعديمة الحب، ومن سابع المستحيلات عندي إني حب أو فكّر بالحب بهالفترة، 
+وحبيتك إنت. 
+قلت لازم تعرف لانو انت كنت تبين هاد الشي ب الاول وانا ما بينت ولا شي ف انو لازم بينلك هاد الشي ومنشان تعرف قديش اخد مكانة بقلبي.
+
+وأنا ما عم احكيلك هالحكي مشان تنغرّ أو تشوف حالك عليّ،
+ ولا مشان حسّسك إنك صرت تملك قلبي وتعمل اللي بدك ياه أبدًا.
+ أنا عم احكيلك لأنو هاد اللي بقلبي فعلًا
+ ولأنو يمكن ما كنت مبيّنة إلك كل هالمشاعر
+ ويمكن ما عرفت عبّر عن مكانتك متل ما لازم
+ بس اليوم حبيت تكون عارف.
+ يمكن أنا كمان تفاجأت بحالي 
+وبقديش إنت صرت تعنيلي
+ وبقديش صار عندي رغبة حافظ على وجودك بحياتي.
+
+فيا ياسيدي، تعال نرجع نحكي ونصلّح كل شي سوا. 
+أنا ما بدي علاقتنا تكون مبنية على إنو إذا شفت فيك شغلة غلط أبعد عنك 
+أو إذا شفت فيني شغلة غلط تبعد عني.
+ ليش أصلًا؟ 
+ليش ما نساعد بعض لنصير أحسن؟
+ إذا في شي مو حلو فيني ساعدني شوفه واشتغل عليه 
+وإذا في شي مو حلو فيك بساعدك قد ما بقدر. 
+وإذا في شي غلط بعلاقتنا منحكي فيه ومنفهم بعض ومنحاول نصلّحه سوا.
+ مو أنا لحالي حاول ولا إنت لحالك تحاول 
+نحنا التنين لازم نكون إيد وحدة لأنو العلاقة إلنا نحنا التنين
+ وتصليحها مسؤوليتنا نحنا التنين.
+
+أنا ما بدي منك تكون شخص بيرفكت ولا بدي كون أنا الإنسانة اللي ما بتغلط. 
+بدي نكون على طبيعتنا نعرف عيوب بعض ونفهمها
+ ونتعلّم كيف نتعامل معها ونكبر مع بعض بدل ما كل 
+ما نلاقي شي صعب نترك بعض ونمشي.
+ بدي نعرف كيف نختلف ونرجع نتفاهم وكيف نزعل ونرجع نحك وكيف نلاقي حل بدل ما نخلي المشكلة تكبر بيناتنا. 
+لأنو مو كل شي غلط معناته لازم نتركه في شغلات بتنصلّح وفي علاقات بتصير أحلى لما الطرفين يقرروا يشتغلوا عليها بإيد بعض.
+
+وبتعرف شو كمان بيب؟ 
+أنا ما بدي نرجع نحكي بس مشان نرجع متل قبل وخلاص، أنا بدي نرجع ونصير أحسن من قبل، نتعلّم من كل شي مرقنا فيه ونبني شي نكون نحنا التنين مرتاحين فيه. بدي نرجع نحكي عن تفاصيلنا ونضحك سوا ونتشارك الأشياء الصغيرة قبل الكبيرة وبدي لما يصير شي بيناتنا نعرف إنو فينا نرجع لبعض ونحلّه، مو نعتبر البعد هو الحل لكل مشكلة.
+
+وبدي يجي يوم بالمستقبل نقعد فيه سوا ونحكي لأولادنا عن هالفترة، ونضحك ونحنا وعم نحكي😂❤️. بدي يكون عنا حكاية حلوة نحكيها، مو لأنو كل شي كان سهل بل لأنو لما صار صعب قررنا نكون مع بعض ونحاول. بدي إذا الله كتب إلنا طريق عمر سوا، نمشيه وإحنا عارفين إنو مهما واجهتنا مشاكل في بيناتنا تفاهم ومحبة ورغبة حقيقية إنو نحافظ على بعض ياروحي.
+
+وأنا عنجد بدي ياك بطريق العمر اللي رح نمشيه سوا إن شاء الله مو بس بالأيام الحلوة بل حتى بالأيام اللي بدها صبر وتفاهم ومحاولة. 
+وبدي تعرف إنو أنا مو عم قول هالحكي لأنو متأكدة إنو كل شي رح يكون مثالي أنا عم قوله لأنو عندي رغبة حقيقية إنو نعطي بعض فرصة، ونتعلّم كيف نكون أحسن لبعض.
+
+وتذكّر شغلة يا مسيو ياحبيب قلب حلا أنا اول عن آخر مرتك وانت ابن عمي فلا تخلّيني ضل ناطرتك وإنت عم تكابر على حالك او انك تضيعني من إيدك 😂😭❤️ أنا اليوم عم مدّ إيدي إلك، مو مشان أرجع كل شي لحالي، بل مشان نمسك إيدين بعض ونرجع نلاقي الطريق اللي بيجمعنا.
+ أنا عملت خطوتي، وهلأ بدي منك كمان خطوة، مو لأنو لازم نعدّ مين عمل أكتر من التاني، بل لأنو بدي حس إنو هالرغبة موجودة عندك كمان، وإنك بدك تصلّح وتحافظ على اللي بيناتنا متل ما أنا بدي.
+
+وبعرف إنو في حكي كتير ناطرنا، وشغلات بدي خبرك ياها وشغلات بدي اسمعها منك، وبدي نرجع نفهم بعض ونحكي متل ما كنا. وين راح التفاهم اللي كان بيناتنا يا زلمة؟
+ شبناااا مسيوغغغغ احمدتو ؟ 
+😂😭 خلينا نرجّعه، وخلينا نرجع نعطي بعض هالراحة الحلوة اللي كانت بيناتنا.
+أنا ما بدي يمرق وقت أكتر ونبعد عن بعض أكتر ياقلبي وأنا ما بدي نضل ناطرين مين رح يبلّش لأنو الحياة أقصر من إنو نضيّع فرص حلوة بسبب المكابرة. 
+وإذا فينا نحكي ونفهم ونصلّح ليش ما نعمل هالشي سوا؟ 
+مو ضروري نحل كل شي بلحظة بس ضروري نكون مستعدين نبلّش. وتعال نفتح صفحة جديدة والله الحياة كتير قصير.
+فـ يلا بقا يا ياروحي ياقلبي انت تعال نرجع نحكي، وتعال نصلّح كل شي سوا ولا عاد تطوّل بالغياب هيك. 🥹❤️ 
+أنا اليوم بادرت وحكيتلك اللي بقلبي ويمكن هاي من أكبر الخطوات اللي عملتها كرمالك هو يعني شو ما عملت بضل قليل وهلأ بتمنى من قلبي إنك تستقبلها بمحبة وتعطينا فرصة نرجع نقرّب من بعض.
+
+كل عام وإنت بخير يا قطعة من قلبي، وإن شاء الله تكون هالمعايدة بداية لحكي جديد وقرب أحلى وأيام نكون فيها موجودين بحياة بعض. 
+ويا رب يجي يوم نطلع فيه لورا ونبتسم، ونكون مبسوطين إنو ما تركنا المكابرة تضيّع منّا شي كان بيستاهل المحاولة. 
+بحبلك الخير من كل قلبي وبتمناك بطريق العمر وإذا إنت كمان بتتمنى هالشي تعال نمشيه سوا خطوة بخطوة وإيد بإيد. ❤️💋
+
+ ❤</p>
+
+
+<p style="text-align:center; color:#7b263a;">
+<strong>❤عم استنى منك رسالة Cheriiii ❤ </strong>
+</p>
+<p style="text-align:center;" Love U Bebb</p>
+</div>
+</div>
+
+<script>
+const secondEnvelope = document.getElementById("secondEnvelope");
+const envelopeClick = document.getElementById("envelopeClick");
+
+function openEnvelope() {
+secondEnvelope.classList.toggle("open");
+}
+
+envelopeClick.addEventListener("click", openEnvelope);
+
+envelopeClick.addEventListener("keydown", function(event) {
+if (event.key === "Enter" || event.key === " ") {
+event.preventDefault();
+openEnvelope();
+}
+});
+
+document.getElementById("secretForm").addEventListener("submit", function(event) {
+event.preventDefault();
+
+const password = document.getElementById("secretPassword").value;
+const message = document.getElementById("passwordMessage");
+
+if (password === "15.02") {
+message.textContent = "صح يا حبيبي ❤️ افتح الظرف!";
+secondEnvelope.style.display = "block";
+} else {
+message.textContent = "مو هي الكلمة يا حبيبي، جرّب مرة تانية 💌";
+secondEnvelope.style.display = "none";
+}
+});
+</script>
+
+
 </body>
 </html>
 
